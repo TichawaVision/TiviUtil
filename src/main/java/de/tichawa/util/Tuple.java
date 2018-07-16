@@ -1,6 +1,7 @@
 package de.tichawa.util;
 
 import java.util.*;
+import java.util.stream.*;
 
 public class Tuple<U, V>
 {
@@ -19,9 +20,10 @@ public class Tuple<U, V>
     return u;
   }
 
-  public void setU(U u)
+  public Tuple<U, V> setU(U u)
   {
     this.u = u;
+    return this;
   }
 
   public V getV()
@@ -29,9 +31,10 @@ public class Tuple<U, V>
     return v;
   }
 
-  public void setV(V v)
+  public Tuple<U, V> setV(V v)
   {
     this.v = v;
+    return this;
   }
 
   @Override
