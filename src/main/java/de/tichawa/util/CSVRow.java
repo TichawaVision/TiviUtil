@@ -31,6 +31,7 @@ public abstract class CSVRow
   
   public abstract CSVRow getNewInstance(String line);
   
+  @SuppressWarnings("unchecked")
   protected final <T extends Property> T addProperty(String name, T property, double width)
   {
     propNames.add(name);
@@ -40,6 +41,7 @@ public abstract class CSVRow
     return property;
   }
   
+  @SuppressWarnings("unchecked")
   public <T> Property<T> getProperty(String name)
   {
     if(propNames.indexOf(name) > -1)
