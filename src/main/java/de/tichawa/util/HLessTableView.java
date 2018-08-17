@@ -7,6 +7,11 @@ import javafx.scene.layout.*;
 public class HLessTableView<T> extends TableView<T>
 {
 
+  public HLessTableView()
+  {
+    super();
+  }
+  
   public HLessTableView(ObservableList<T> c)
   {
     super(c);
