@@ -1,6 +1,7 @@
 package de.tichawa.util;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import javafx.beans.property.*;
 
 public abstract class CSVRow
@@ -68,5 +69,14 @@ public abstract class CSVRow
   public static boolean hasChanged()
   {
     return CHANGED;
+  }
+  
+  @Override
+  public String toString()
+  {
+    return properties.stream()
+            .map(Property::getValue)
+            .map(Object::toString)
+            .collect(Collectors.joining("\t"));
   }
 }
